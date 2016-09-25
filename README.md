@@ -1,0 +1,1 @@
+# jcrop_carrierwave
