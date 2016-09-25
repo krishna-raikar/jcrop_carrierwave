@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Galleries</h1>
+<div class="container">
+<% @galleries.each do |gallery| %>
+
+    <div class="img-group">
+      <%= image_tag gallery.image_url(:thumb) %><br>
+      <%= gallery.title %> | <%= link_to 'remove', gallery, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+<% end %>
+<div class="subbtn">
+<%= link_to 'Add Picture', new_gallery_path %>
+</div>
+
+</div>
+<br>
